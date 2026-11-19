@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} // BioGuard</title><link rel="stylesheet" href="{{ url_for('static', filename='css/game.css') }}">
+</head>
+<body class="app-shell setup-page">
+  {% include '_nav.html' %}
+  <main class="setup-layout">
+    <section class="setup-card card">
+      <div class="kicker"><span class="status-dot"></span> FIRST LAUNCH // LOCAL CONTROL</div>
+      <h1>Welcome to <em>BioGuard</em></h1>
+      <p class="lead">Create the local Admin PIN/password first. This unlocks the control panel where consented users can be enrolled.</p>
+      {% if error %}<div class="alert alert-danger" role="alert">{{ error }}</div>{% endif %}
+      <form method="post" class="form-stack">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <label>Admin PIN or password<input type="password" name="password" minlength="6" autocomplete="new-password" required autofocus><small>Stored as a password hash in private local storage. It is never a biometric identity.</small></label>
+        <label>Confirm Admin PIN or password<input type="password" name="confirm_password" minlength="6" autocomplete="new-password" required></label>
+        <button class="btn btn-primary btn-wide" type="submit">Create Admin access <span>→</span></button>
+      </form>
+      <p class="tiny-note">You can also set <code>BIOGUARD_ADMIN_PASSWORD</code> before launch to use an environment-provided password.</p>
+    </section>
+    <aside class="setup-rail">
+      <div class="setup-step active"><b>01</b><span><strong>Set Admin PIN</strong><small>Create local control access</small></span></div>
+      <div class="setup-line"></div>
+      <div class="setup-step"><b>02</b><span><strong>Open Control Panel</strong><small>Review models and users</small></span></div>
+      <div class="setup-line"></div>
+      <div class="setup-step"><b>03</b><span><strong>Add First User</strong><small>Enroll four face + voice samples</small></span></div>
+    </aside>
+  </main>
+</body>
+</html>

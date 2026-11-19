@@ -1,0 +1,721 @@
+model,true,predicted
+SVM,down,down
+SVM,down,go
+SVM,down,down
+SVM,down,down
+SVM,down,go
+SVM,down,down
+SVM,down,down
+SVM,down,down
+SVM,down,down
+SVM,down,left
+SVM,down,no
+SVM,down,down
+SVM,down,no
+SVM,down,down
+SVM,down,down
+SVM,down,down
+SVM,down,stop
+SVM,down,stop
+SVM,down,down
+SVM,down,right
+SVM,down,go
+SVM,down,go
+SVM,down,down
+SVM,down,down
+SVM,down,left
+SVM,down,down
+SVM,down,no
+SVM,down,down
+SVM,down,right
+SVM,down,right
+SVM,down,down
+SVM,down,down
+SVM,down,down
+SVM,down,down
+SVM,down,down
+SVM,down,down
+SVM,down,down
+SVM,down,down
+SVM,down,down
+SVM,down,down
+SVM,down,down
+SVM,down,go
+SVM,down,down
+SVM,down,down
+SVM,down,no
+SVM,go,go
+SVM,go,go
+SVM,go,no
+SVM,go,go
+SVM,go,go
+SVM,go,go
+SVM,go,go
+SVM,go,left
+SVM,go,go
+SVM,go,down
+SVM,go,no
+SVM,go,go
+SVM,go,go
+SVM,go,go
+SVM,go,go
+SVM,go,down
+SVM,go,go
+SVM,go,down
+SVM,go,go
+SVM,go,down
+SVM,go,go
+SVM,go,no
+SVM,go,go
+SVM,go,left
+SVM,go,go
+SVM,go,no
+SVM,go,right
+SVM,go,left
+SVM,go,go
+SVM,go,up
+SVM,go,go
+SVM,go,go
+SVM,go,go
+SVM,go,go
+SVM,go,go
+SVM,go,left
+SVM,go,right
+SVM,go,right
+SVM,go,go
+SVM,go,up
+SVM,go,down
+SVM,go,go
+SVM,go,go
+SVM,go,down
+SVM,go,go
+SVM,left,left
+SVM,left,left
+SVM,left,no
+SVM,left,left
+SVM,left,stop
+SVM,left,left
+SVM,left,left
+SVM,left,left
+SVM,left,up
+SVM,left,left
+SVM,left,left
+SVM,left,left
+SVM,left,left
+SVM,left,stop
+SVM,left,left
+SVM,left,go
+SVM,left,left
+SVM,left,right
+SVM,left,no
+SVM,left,stop
+SVM,left,left
+SVM,left,left
+SVM,left,right
+SVM,left,left
+SVM,left,no
+SVM,left,go
+SVM,left,stop
+SVM,left,left
+SVM,left,no
+SVM,left,go
+SVM,left,left
+SVM,left,left
+SVM,left,left
+SVM,left,left
+SVM,left,left
+SVM,left,left
+SVM,left,go
+SVM,left,left
+SVM,left,down
+SVM,left,left
+SVM,left,left
+SVM,left,no
+SVM,left,left
+SVM,left,left
+SVM,left,left
+SVM,no,no
+SVM,no,no
+SVM,no,right
+SVM,no,go
+SVM,no,no
+SVM,no,go
+SVM,no,yes
+SVM,no,down
+SVM,no,no
+SVM,no,no
+SVM,no,go
+SVM,no,no
+SVM,no,no
+SVM,no,stop
+SVM,no,down
+SVM,no,yes
+SVM,no,up
+SVM,no,no
+SVM,no,no
+SVM,no,no
+SVM,no,no
+SVM,no,up
+SVM,no,no
+SVM,no,down
+SVM,no,no
+SVM,no,no
+SVM,no,left
+SVM,no,left
+SVM,no,left
+SVM,no,right
+SVM,no,no
+SVM,no,right
+SVM,no,no
+SVM,no,no
+SVM,no,down
+SVM,no,no
+SVM,no,go
+SVM,no,no
+SVM,no,no
+SVM,no,no
+SVM,no,no
+SVM,no,go
+SVM,no,no
+SVM,no,no
+SVM,no,go
+SVM,right,right
+SVM,right,no
+SVM,right,right
+SVM,right,no
+SVM,right,right
+SVM,right,right
+SVM,right,right
+SVM,right,right
+SVM,right,right
+SVM,right,right
+SVM,right,right
+SVM,right,right
+SVM,right,right
+SVM,right,right
+SVM,right,no
+SVM,right,right
+SVM,right,right
+SVM,right,right
+SVM,right,right
+SVM,right,right
+SVM,right,right
+SVM,right,right
+SVM,right,no
+SVM,right,no
+SVM,right,left
+SVM,right,right
+SVM,right,right
+SVM,right,right
+SVM,right,right
+SVM,right,yes
+SVM,right,right
+SVM,right,right
+SVM,right,right
+SVM,right,right
+SVM,right,up
+SVM,right,right
+SVM,right,right
+SVM,right,right
+SVM,right,right
+SVM,right,right
+SVM,right,right
+SVM,right,right
+SVM,right,right
+SVM,right,right
+SVM,right,right
+SVM,stop,stop
+SVM,stop,stop
+SVM,stop,stop
+SVM,stop,stop
+SVM,stop,yes
+SVM,stop,stop
+SVM,stop,stop
+SVM,stop,stop
+SVM,stop,stop
+SVM,stop,stop
+SVM,stop,go
+SVM,stop,stop
+SVM,stop,down
+SVM,stop,stop
+SVM,stop,stop
+SVM,stop,stop
+SVM,stop,stop
+SVM,stop,stop
+SVM,stop,stop
+SVM,stop,stop
+SVM,stop,right
+SVM,stop,no
+SVM,stop,right
+SVM,stop,stop
+SVM,stop,stop
+SVM,stop,stop
+SVM,stop,right
+SVM,stop,stop
+SVM,stop,stop
+SVM,stop,stop
+SVM,stop,right
+SVM,stop,up
+SVM,stop,up
+SVM,stop,right
+SVM,stop,stop
+SVM,stop,stop
+SVM,stop,stop
+SVM,stop,go
+SVM,stop,go
+SVM,stop,stop
+SVM,stop,stop
+SVM,stop,stop
+SVM,stop,stop
+SVM,stop,stop
+SVM,stop,right
+SVM,up,up
+SVM,up,up
+SVM,up,left
+SVM,up,up
+SVM,up,up
+SVM,up,up
+SVM,up,up
+SVM,up,up
+SVM,up,up
+SVM,up,left
+SVM,up,up
+SVM,up,yes
+SVM,up,left
+SVM,up,right
+SVM,up,up
+SVM,up,stop
+SVM,up,up
+SVM,up,stop
+SVM,up,stop
+SVM,up,right
+SVM,up,go
+SVM,up,go
+SVM,up,up
+SVM,up,up
+SVM,up,up
+SVM,up,up
+SVM,up,up
+SVM,up,up
+SVM,up,up
+SVM,up,up
+SVM,up,up
+SVM,up,stop
+SVM,up,stop
+SVM,up,up
+SVM,up,up
+SVM,up,left
+SVM,up,left
+SVM,up,up
+SVM,up,up
+SVM,up,up
+SVM,up,stop
+SVM,up,stop
+SVM,up,down
+SVM,up,up
+SVM,up,up
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,right
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,right
+SVM,yes,right
+SVM,yes,down
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,down
+SVM,yes,yes
+SVM,yes,yes
+SVM,yes,right
+SVM,yes,yes
+Random Forest,down,down
+Random Forest,down,go
+Random Forest,down,down
+Random Forest,down,down
+Random Forest,down,down
+Random Forest,down,down
+Random Forest,down,go
+Random Forest,down,down
+Random Forest,down,right
+Random Forest,down,left
+Random Forest,down,down
+Random Forest,down,down
+Random Forest,down,down
+Random Forest,down,down
+Random Forest,down,down
+Random Forest,down,down
+Random Forest,down,stop
+Random Forest,down,left
+Random Forest,down,right
+Random Forest,down,right
+Random Forest,down,no
+Random Forest,down,down
+Random Forest,down,down
+Random Forest,down,down
+Random Forest,down,left
+Random Forest,down,down
+Random Forest,down,no
+Random Forest,down,down
+Random Forest,down,right
+Random Forest,down,right
+Random Forest,down,down
+Random Forest,down,stop
+Random Forest,down,down
+Random Forest,down,down
+Random Forest,down,down
+Random Forest,down,down
+Random Forest,down,down
+Random Forest,down,up
+Random Forest,down,down
+Random Forest,down,down
+Random Forest,down,down
+Random Forest,down,down
+Random Forest,down,down
+Random Forest,down,no
+Random Forest,down,no
+Random Forest,go,go
+Random Forest,go,go
+Random Forest,go,left
+Random Forest,go,go
+Random Forest,go,go
+Random Forest,go,go
+Random Forest,go,go
+Random Forest,go,left
+Random Forest,go,down
+Random Forest,go,go
+Random Forest,go,no
+Random Forest,go,left
+Random Forest,go,go
+Random Forest,go,down
+Random Forest,go,go
+Random Forest,go,up
+Random Forest,go,go
+Random Forest,go,yes
+Random Forest,go,yes
+Random Forest,go,left
+Random Forest,go,no
+Random Forest,go,no
+Random Forest,go,stop
+Random Forest,go,up
+Random Forest,go,down
+Random Forest,go,no
+Random Forest,go,right
+Random Forest,go,left
+Random Forest,go,no
+Random Forest,go,no
+Random Forest,go,down
+Random Forest,go,left
+Random Forest,go,go
+Random Forest,go,go
+Random Forest,go,left
+Random Forest,go,left
+Random Forest,go,right
+Random Forest,go,yes
+Random Forest,go,go
+Random Forest,go,up
+Random Forest,go,down
+Random Forest,go,go
+Random Forest,go,go
+Random Forest,go,down
+Random Forest,go,go
+Random Forest,left,left
+Random Forest,left,left
+Random Forest,left,down
+Random Forest,left,go
+Random Forest,left,right
+Random Forest,left,left
+Random Forest,left,left
+Random Forest,left,left
+Random Forest,left,left
+Random Forest,left,go
+Random Forest,left,left
+Random Forest,left,left
+Random Forest,left,stop
+Random Forest,left,stop
+Random Forest,left,left
+Random Forest,left,left
+Random Forest,left,left
+Random Forest,left,left
+Random Forest,left,no
+Random Forest,left,stop
+Random Forest,left,left
+Random Forest,left,left
+Random Forest,left,right
+Random Forest,left,right
+Random Forest,left,no
+Random Forest,left,stop
+Random Forest,left,stop
+Random Forest,left,left
+Random Forest,left,left
+Random Forest,left,go
+Random Forest,left,right
+Random Forest,left,left
+Random Forest,left,left
+Random Forest,left,right
+Random Forest,left,down
+Random Forest,left,up
+Random Forest,left,up
+Random Forest,left,stop
+Random Forest,left,down
+Random Forest,left,left
+Random Forest,left,go
+Random Forest,left,up
+Random Forest,left,left
+Random Forest,left,left
+Random Forest,left,stop
+Random Forest,no,no
+Random Forest,no,go
+Random Forest,no,right
+Random Forest,no,go
+Random Forest,no,no
+Random Forest,no,down
+Random Forest,no,yes
+Random Forest,no,down
+Random Forest,no,no
+Random Forest,no,no
+Random Forest,no,no
+Random Forest,no,no
+Random Forest,no,left
+Random Forest,no,stop
+Random Forest,no,down
+Random Forest,no,right
+Random Forest,no,go
+Random Forest,no,no
+Random Forest,no,right
+Random Forest,no,go
+Random Forest,no,no
+Random Forest,no,up
+Random Forest,no,no
+Random Forest,no,right
+Random Forest,no,no
+Random Forest,no,no
+Random Forest,no,left
+Random Forest,no,up
+Random Forest,no,right
+Random Forest,no,no
+Random Forest,no,no
+Random Forest,no,right
+Random Forest,no,no
+Random Forest,no,no
+Random Forest,no,down
+Random Forest,no,no
+Random Forest,no,go
+Random Forest,no,no
+Random Forest,no,no
+Random Forest,no,no
+Random Forest,no,no
+Random Forest,no,go
+Random Forest,no,no
+Random Forest,no,go
+Random Forest,no,go
+Random Forest,right,right
+Random Forest,right,no
+Random Forest,right,right
+Random Forest,right,no
+Random Forest,right,right
+Random Forest,right,right
+Random Forest,right,right
+Random Forest,right,right
+Random Forest,right,right
+Random Forest,right,right
+Random Forest,right,down
+Random Forest,right,right
+Random Forest,right,right
+Random Forest,right,no
+Random Forest,right,right
+Random Forest,right,right
+Random Forest,right,right
+Random Forest,right,right
+Random Forest,right,right
+Random Forest,right,right
+Random Forest,right,right
+Random Forest,right,right
+Random Forest,right,no
+Random Forest,right,no
+Random Forest,right,right
+Random Forest,right,right
+Random Forest,right,right
+Random Forest,right,right
+Random Forest,right,right
+Random Forest,right,yes
+Random Forest,right,right
+Random Forest,right,right
+Random Forest,right,right
+Random Forest,right,right
+Random Forest,right,yes
+Random Forest,right,right
+Random Forest,right,right
+Random Forest,right,down
+Random Forest,right,right
+Random Forest,right,right
+Random Forest,right,right
+Random Forest,right,right
+Random Forest,right,right
+Random Forest,right,right
+Random Forest,right,right
+Random Forest,stop,stop
+Random Forest,stop,stop
+Random Forest,stop,stop
+Random Forest,stop,stop
+Random Forest,stop,yes
+Random Forest,stop,stop
+Random Forest,stop,stop
+Random Forest,stop,stop
+Random Forest,stop,stop
+Random Forest,stop,stop
+Random Forest,stop,left
+Random Forest,stop,stop
+Random Forest,stop,down
+Random Forest,stop,stop
+Random Forest,stop,stop
+Random Forest,stop,stop
+Random Forest,stop,stop
+Random Forest,stop,stop
+Random Forest,stop,stop
+Random Forest,stop,stop
+Random Forest,stop,right
+Random Forest,stop,left
+Random Forest,stop,left
+Random Forest,stop,stop
+Random Forest,stop,stop
+Random Forest,stop,stop
+Random Forest,stop,stop
+Random Forest,stop,stop
+Random Forest,stop,stop
+Random Forest,stop,stop
+Random Forest,stop,left
+Random Forest,stop,up
+Random Forest,stop,yes
+Random Forest,stop,right
+Random Forest,stop,stop
+Random Forest,stop,stop
+Random Forest,stop,stop
+Random Forest,stop,up
+Random Forest,stop,up
+Random Forest,stop,stop
+Random Forest,stop,yes
+Random Forest,stop,stop
+Random Forest,stop,left
+Random Forest,stop,left
+Random Forest,stop,right
+Random Forest,up,up
+Random Forest,up,up
+Random Forest,up,left
+Random Forest,up,up
+Random Forest,up,up
+Random Forest,up,up
+Random Forest,up,up
+Random Forest,up,up
+Random Forest,up,stop
+Random Forest,up,left
+Random Forest,up,go
+Random Forest,up,yes
+Random Forest,up,up
+Random Forest,up,right
+Random Forest,up,up
+Random Forest,up,stop
+Random Forest,up,up
+Random Forest,up,stop
+Random Forest,up,stop
+Random Forest,up,no
+Random Forest,up,go
+Random Forest,up,up
+Random Forest,up,up
+Random Forest,up,up
+Random Forest,up,up
+Random Forest,up,up
+Random Forest,up,up
+Random Forest,up,up
+Random Forest,up,up
+Random Forest,up,up
+Random Forest,up,up
+Random Forest,up,stop
+Random Forest,up,stop
+Random Forest,up,left
+Random Forest,up,up
+Random Forest,up,no
+Random Forest,up,up
+Random Forest,up,up
+Random Forest,up,up
+Random Forest,up,up
+Random Forest,up,left
+Random Forest,up,stop
+Random Forest,up,down
+Random Forest,up,up
+Random Forest,up,stop
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,no
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,right
+Random Forest,yes,right
+Random Forest,yes,right
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,no
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes
+Random Forest,yes,yes

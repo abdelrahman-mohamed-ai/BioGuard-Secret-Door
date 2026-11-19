@@ -1,0 +1,43 @@
+{
+  "version": "1.0",
+  "target_far": 0.05,
+  "source": "public_data_feature_cache_only; not a local-user accuracy claim",
+  "modalities": {
+    "image": {
+      "version": "1.0",
+      "method": "cosine_mean",
+      "threshold": 0.8924207639595091,
+      "threshold_raw": 0.8924207639595091,
+      "higher_is_better": true,
+      "source": "public_data_validation_plus_validation_unknown",
+      "status": "provisional_public_reference",
+      "target_far": 0.05,
+      "validation_claim_far": 0.03333333333333333,
+      "validation_claim_frr": 0.0,
+      "validation_known_id_rate": 1.0,
+      "validation_unknown_rejection_rate": 0.9285714285714286,
+      "independent_unknown_test_available": true,
+      "local_gallery_calibration_required": true,
+      "ambiguity_margin": 0.031975006395188445
+    },
+    "voice": {
+      "version": "1.0",
+      "method": "zcos_mean",
+      "threshold": 0.3908886485400538,
+      "threshold_raw": 0.3908886485400538,
+      "higher_is_better": true,
+      "source": "public_data_validation_plus_validation_unknown",
+      "status": "provisional_public_reference",
+      "target_far": 0.05,
+      "validation_claim_far": 0.041666666666666664,
+      "validation_claim_frr": 0.6,
+      "validation_known_id_rate": 0.4,
+      "validation_unknown_rejection_rate": 0.8214285714285714,
+      "independent_unknown_test_available": true,
+      "local_gallery_calibration_required": true,
+      "ambiguity_margin": 0.05,
+      "runtime_policy": "versioned_reference_only",
+      "selection_note": "Standardized cosine-to-mean selected from the existing validation partition for lower unknown acceptance and better local leave-one-out stability; local-gallery recalibration is diagnostic only."
+    }
+  }
+}

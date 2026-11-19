@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  <title>{{ 'Re-enroll' if re_enroll else 'Add new user' }} // BioGuard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/game.css') }}">
+</head>
+<body class="app-shell console-page enrollment-page" data-csrf="{{ csrf_token() }}">
+  {% include '_nav.html' %}
+  {% set state = form_state or {} %}
+  {% set display_name_value = state.get('display_name', re_enroll.display_name if re_enroll else '') %}
+  {% set identifier_value = state.get('identifier', re_enroll.identifier if re_enroll else '') %}
+  {% set role_value = state.get('role', re_enroll.role if re_enroll else 'operator') %}
+  {% set active_value = state.get('active', (not re_enroll or re_enroll.active)) %}
+  {% set selected_permissions = state.get('permissions', re_enroll.permissions if re_enroll else ['open_door', 'command_open', 'command_close']) %}
+  {% set consent_value = state.get('consent', false) %}
+  <main class="wizard-main page-width">
+    <div class="page-heading">
+      <div>
+        <div class="kicker"><span class="status-dot"></span> CONTROL PANEL // ENROLLMENT WIZARD</div>
+        <h1>{{ 'Re-enroll' if re_enroll else 'Add a new' }} <em>user</em></h1>
+        <p class="lead">Four real face samples and four real voice samples make a local gallery template. The public research models are never retrained.</p>
+      </div>
+      <div class="heading-actions">
+        <button class="btn btn-quiet" type="button" data-back>Back</button>
+        <a class="btn btn-quiet" href="{{ url_for('admin_users') }}">Users</a>
+      </div>
+    </div>
+    {% if error %}<div class="alert alert-danger" role="alert">{{ error }}</div>{% endif %}
+    <div id="enrollment-form-error" class="alert alert-danger" role="alert" hidden></div>
+    <div class="wizard-progress" aria-label="Enrollment progress">
+      <div class="wizard-progress-step active"><b>01</b><span>Information</span></div><i></i>
+      <div class="wizard-progress-step"><b>02</b><span>Face / 4</span></div><i></i>
+      <div class="wizard-progress-step"><b>03</b><span>Voice / 4</span></div><i></i>
+      <div class="wizard-progress-step"><b>04</b><span>Save</span></div>
+    </div>
+
+    <form id="enrollment-form" class="enrollment-form" method="post" enctype="multipart/form-data" action="{{ url_for('admin_enroll', re_enroll=re_enroll.identifier if re_enroll else '') }}" data-api="{{ url_for('api_admin_enroll') }}" novalidate>
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+      <input type="hidden" name="replace_identifier" value="{{ re_enroll.identifier if re_enroll else '' }}">
+
+      <section id="user-information" class="wizard-section card enrollment-info-card">
+        <div class="wizard-section-head">
+          <span class="step-number">01</span>
+          <div><h2>User information</h2><p>Always editable until the confirmed save. Capturing a face or voice sample never changes these fields.</p></div>
+        </div>
+        <div class="form-grid">
+          <label>Full name
+            <input name="display_name" data-draft-field="display_name" required maxlength="80" autocomplete="name" placeholder="e.g. Full name" value="{{ display_name_value }}">
+            <small data-field-error="display_name" class="field-error" hidden></small>
+          </label>
+          <label>Employee ID
+            <input name="identifier" data-draft-field="identifier" required pattern="[A-Za-z0-9_-]{2,40}" autocomplete="off" placeholder="e.g. employee-01" value="{{ identifier_value }}" {{ 'readonly' if re_enroll else '' }}>
+            <small>Latin letters, digits, underscore and hyphen only.{% if re_enroll %} Re-enrollment keeps the existing identifier.{% endif %}</small>
+            <small data-field-error="identifier" class="field-error" hidden></small>
+          </label>
+          <label>Role
+            <select name="role" data-draft-field="role">
+              <option value="operator" {% if role_value == 'operator' %}selected{% endif %}>Operator</option>
+              <option value="supervisor" {% if role_value == 'supervisor' %}selected{% endif %}>Supervisor</option>
+              <option value="security" {% if role_value == 'security' %}selected{% endif %}>Security</option>
+              <option value="observer" {% if role_value == 'observer' %}selected{% endif %}>Observer</option>
+            </select>
+            <small data-field-error="role" class="field-error" hidden></small>
+          </label>
+          <label class="switch-row"><input type="checkbox" name="active" value="on" data-draft-field="active" {% if active_value %}checked{% endif %}><span><strong>Active user</strong><small>Can be verified immediately</small></span></label>
+        </div>
+        <div class="permission-choice">
+          <div><strong>Access permissions</strong><small>Choose what this person can do after identity verification.</small></div>
+          <label><input type="checkbox" name="access_permissions" value="open_door" data-draft-permission {% if 'open_door' in selected_permissions %}checked{% endif %}> Allow door access</label>
+          <label><input type="checkbox" name="access_permissions" value="command_open" data-draft-permission {% if 'command_open' in selected_permissions %}checked{% endif %}> Allow GO command</label>
+          <label><input type="checkbox" name="access_permissions" value="command_close" data-draft-permission {% if 'command_close' in selected_permissions %}checked{% endif %}> Allow STOP command</label>
+          <small data-field-error="permissions" class="field-error" hidden></small>
+        </div>
+      </section>
+
+      <section class="wizard-section card">
+        <div class="wizard-section-head"><span class="step-number">02</span><div><h2>Face enrollment <span class="count-badge" id="face-count">0 / 4</span></h2><p>Each slot is independent. A failed slot can be replaced without touching other faces, voice samples, or user information.</p></div></div>
+        <div class="face-enroll-layout">
+          <div class="enroll-camera">
+            <video id="enroll-camera" autoplay muted playsinline></video><canvas id="enroll-canvas" class="hidden"></canvas>
+            <div id="enroll-camera-placeholder" class="camera-placeholder"><div class="crosshair"><i></i></div><strong>CAMERA READY</strong><small>Choose a face slot, then enable the camera</small></div>
+            <div class="panel-controls"><button id="enroll-camera-start" type="button" class="btn btn-secondary">Enable camera</button><button id="capture-face" type="button" class="btn btn-primary" disabled>Capture selected slot</button></div>
+            <p id="face-capture-status" class="tiny-note enrollment-control-status">Select a slot to target the camera.</p>
+          </div>
+          <div class="sample-column">
+            <label class="upload-label" for="face-images">Upload files to fill empty slots</label>
+            <input id="face-images" type="file" accept="image/jpeg,image/png" multiple>
+            <div class="sample-slots" id="face-slots"><div class="sample-slot"><b>1</b><span>Front face</span></div><div class="sample-slot"><b>2</b><span>Slight right</span></div><div class="sample-slot"><b>3</b><span>Slight left</span></div><div class="sample-slot"><b>4</b><span>Different angle</span></div></div>
+            <p class="quality-hint">Each image gets local size/contrast feedback first. The server then performs face detection and the existing HOG/LBP extraction before saving.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="wizard-section card">
+        <div class="wizard-section-head"><span class="step-number">03</span><div><h2>Voice enrollment <span class="count-badge" id="voice-count">0 / 4</span></h2><p>Each slot is independent. Replace only the recording that fails silence, duration, or format checks.</p></div></div>
+        <div class="voice-enroll-layout">
+          <div class="voice-recorder">
+            <div class="voice-orb" id="voice-orb"><span>MIC</span></div><div class="voice-timer" id="enroll-voice-timer">00:00</div>
+            <button id="record-enroll-voice" type="button" class="btn btn-primary">Record selected slot</button>
+            <p id="voice-record-status" class="tiny-note">Select a voice slot, then say "BioGuard access" clearly for three seconds.</p>
+          </div>
+          <div class="sample-column">
+            <label class="upload-label" for="voice-recordings">Upload files to fill empty slots</label>
+            <input id="voice-recordings" type="file" accept="audio/*,.wav,.webm,.ogg,.mp3,.m4a" multiple>
+            <div class="voice-slots" id="voice-slots"><div class="sample-slot"><b>1</b><span>Voice one</span></div><div class="sample-slot"><b>2</b><span>Voice two</span></div><div class="sample-slot"><b>3</b><span>Voice three</span></div><div class="sample-slot"><b>4</b><span>Voice four</span></div></div>
+            <p class="quality-hint">Browser recordings and uploads are converted to mono 16 kHz WAV before the existing MFCC/ZCR/RMS pipeline runs.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="wizard-section save-section card">
+        <div class="wizard-section-head"><span class="step-number">04</span><div><h2>Review and save</h2><p id="save-summary">Complete four face slots and four voice slots to enable enrollment.</p></div></div>
+        <label class="consent-row"><input id="enrollment-consent" type="checkbox" name="consent" data-draft-field="consent" required {% if consent_value %}checked{% endif %}><span><strong>I confirm consent to store this user's biometric enrollment locally.</strong><small>Raw enrollment media is kept outside static files and removed with the user. No cloud service is used.</small><small data-field-error="consent" class="field-error" hidden></small></span></label>
+        <div><button id="save-enroll" type="submit" class="btn btn-primary btn-xl" disabled>Save &amp; enroll user</button><p id="enrollment-save-status" class="tiny-note enrollment-save-status" aria-live="polite"></p></div>
+      </section>
+    </form>
+  </main>
+  <script src="{{ url_for('static', filename='js/capture.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/enrollment.js') }}"></script>
+</body>
+</html>

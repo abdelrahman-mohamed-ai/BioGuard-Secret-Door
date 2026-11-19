@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Admin login // BioGuard</title><link rel="stylesheet" href="{{ url_for('static', filename='css/game.css') }}"></head>
+<body class="app-shell admin-page">
+  {% include '_nav.html' %}
+  <main class="auth-layout"><section class="auth-card card"><div class="kicker"><span class="status-dot"></span> CONTROL PANEL // ADMIN ONLY</div><h1>Welcome <em>back.</em></h1><p class="lead">Sign in to enroll users, update permissions, and view the exported research reports.</p>{% with messages = get_flashed_messages(with_categories=true) %}{% if messages %}{% for category, message in messages %}<div class="alert alert-success">{{ message }}</div>{% endfor %}{% endif %}{% endwith %}{% if error %}<div class="alert alert-danger" role="alert">{{ error }}</div>{% endif %}<form method="post" class="form-stack"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><input type="hidden" name="next" value="{{ request.args.get('next','') }}"><label>Admin PIN/password<input id="password" name="password" type="password" autocomplete="current-password" required autofocus></label><button class="btn btn-primary btn-wide" type="submit">Open control panel <span>→</span></button></form><div class="auth-footer"><span>Local session only</span><a href="{{ url_for('index') }}">← Home</a></div></section><aside class="auth-side"><div class="side-orb"><span>BG</span></div><h2>Guard the gallery.</h2><p>Only the admin can create or change biometric enrollment. The public game has no user picker and no enrollment endpoint.</p></aside></main>
+</body>
+</html>

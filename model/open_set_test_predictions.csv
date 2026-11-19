@@ -1,0 +1,478 @@
+mode,actual,predicted,accepted,sample
+Image Only,actor_01,actor_01,True,01-01-06-01-02-02-01
+Image Only,actor_01,actor_01,True,01-01-03-02-01-02-01
+Image Only,actor_01,actor_01,True,01-01-01-01-02-01-01
+Image Only,actor_01,actor_01,True,01-01-06-02-02-02-01
+Image Only,actor_01,Unknown,False,01-01-03-02-01-01-01
+Image Only,actor_02,actor_02,True,01-01-07-02-02-02-02
+Image Only,actor_02,actor_02,True,01-01-08-02-01-01-02
+Image Only,actor_02,actor_02,True,01-01-07-01-02-02-02
+Image Only,actor_02,actor_02,True,01-01-08-02-01-02-02
+Image Only,actor_02,actor_02,True,01-01-05-02-01-01-02
+Image Only,actor_03,actor_03,True,01-01-04-02-02-02-03
+Image Only,actor_03,actor_03,True,01-01-05-01-01-01-03
+Image Only,actor_03,actor_03,True,01-01-05-01-01-02-03
+Image Only,actor_03,actor_03,True,01-01-04-01-02-02-03
+Image Only,actor_03,actor_03,True,01-01-04-01-01-02-03
+Image Only,actor_04,Unknown,False,01-01-02-02-01-02-04
+Image Only,actor_04,actor_04,True,01-01-02-01-01-01-04
+Image Only,actor_04,actor_04,True,01-01-04-01-01-02-04
+Image Only,actor_04,actor_04,True,01-01-01-01-01-02-04
+Image Only,actor_04,actor_04,True,01-01-01-01-01-01-04
+Image Only,actor_05,Unknown,False,01-01-01-01-02-02-05
+Image Only,actor_05,actor_05,True,01-01-06-02-02-02-05
+Image Only,actor_05,actor_05,True,01-01-06-01-02-01-05
+Image Only,actor_05,actor_05,True,01-01-04-01-01-01-05
+Image Only,actor_05,actor_05,True,01-01-04-01-01-02-05
+Image Only,Unknown,Unknown,False,01-01-01-01-01-01-07
+Image Only,Unknown,Unknown,False,01-01-03-02-01-01-07
+Image Only,Unknown,Unknown,False,01-01-07-01-02-01-07
+Image Only,Unknown,Unknown,False,01-01-05-01-02-01-07
+Image Only,Unknown,Unknown,False,01-01-06-02-01-02-07
+Image Only,Unknown,Unknown,False,01-01-08-02-01-02-07
+Image Only,Unknown,Unknown,False,01-01-06-01-01-02-07
+Image Only,Unknown,Unknown,False,01-01-08-02-01-01-07
+Image Only,Unknown,Unknown,False,01-01-06-02-02-01-07
+Image Only,Unknown,Unknown,False,01-01-02-01-01-02-07
+Image Only,Unknown,Unknown,False,01-01-04-01-01-02-07
+Image Only,Unknown,Unknown,False,01-01-06-01-02-02-07
+Image Only,Unknown,Unknown,False,01-01-05-01-01-01-07
+Image Only,Unknown,Unknown,False,01-01-08-02-02-02-07
+Image Only,Unknown,Unknown,False,01-01-07-01-01-02-07
+Image Only,Unknown,Unknown,False,01-01-07-02-01-02-07
+Image Only,Unknown,Unknown,False,01-01-02-01-02-01-07
+Image Only,Unknown,Unknown,False,01-01-07-01-01-01-07
+Image Only,Unknown,Unknown,False,01-01-05-02-01-02-07
+Image Only,Unknown,Unknown,False,01-01-08-02-02-01-07
+Image Only,Unknown,actor_01,True,01-01-03-02-02-02-07
+Image Only,Unknown,Unknown,False,01-01-04-02-02-02-07
+Image Only,Unknown,Unknown,False,01-01-08-01-02-02-07
+Image Only,Unknown,Unknown,False,01-01-05-01-02-02-07
+Image Only,Unknown,Unknown,False,01-01-02-02-02-02-07
+Image Only,Unknown,Unknown,False,01-01-04-02-01-01-07
+Image Only,Unknown,Unknown,False,01-01-02-02-02-01-07
+Image Only,Unknown,Unknown,False,01-01-03-01-01-01-07
+Voice Only,actor_01,actor_01,True,01-01-06-01-02-02-01
+Voice Only,actor_01,actor_01,True,01-01-03-02-01-02-01
+Voice Only,actor_01,Unknown,False,01-01-01-01-02-01-01
+Voice Only,actor_01,actor_01,True,01-01-06-02-02-02-01
+Voice Only,actor_01,actor_01,True,01-01-03-02-01-01-01
+Voice Only,actor_02,actor_02,True,01-01-07-02-02-02-02
+Voice Only,actor_02,Unknown,False,01-01-08-02-01-01-02
+Voice Only,actor_02,actor_02,True,01-01-07-01-02-02-02
+Voice Only,actor_02,Unknown,False,01-01-08-02-01-02-02
+Voice Only,actor_02,actor_02,True,01-01-05-02-01-01-02
+Voice Only,actor_03,Unknown,False,01-01-04-02-02-02-03
+Voice Only,actor_03,actor_05,True,01-01-05-01-01-01-03
+Voice Only,actor_03,actor_03,True,01-01-05-01-01-02-03
+Voice Only,actor_03,actor_03,True,01-01-04-01-02-02-03
+Voice Only,actor_03,actor_03,True,01-01-04-01-01-02-03
+Voice Only,actor_04,actor_04,True,01-01-02-02-01-02-04
+Voice Only,actor_04,actor_02,True,01-01-02-01-01-01-04
+Voice Only,actor_04,actor_02,True,01-01-04-01-01-02-04
+Voice Only,actor_04,actor_04,True,01-01-01-01-01-02-04
+Voice Only,actor_04,Unknown,False,01-01-01-01-01-01-04
+Voice Only,actor_05,Unknown,False,01-01-01-01-02-02-05
+Voice Only,actor_05,Unknown,False,01-01-06-02-02-02-05
+Voice Only,actor_05,Unknown,False,01-01-06-01-02-01-05
+Voice Only,actor_05,actor_05,True,01-01-04-01-01-01-05
+Voice Only,actor_05,actor_05,True,01-01-04-01-01-02-05
+Voice Only,Unknown,Unknown,False,01-01-01-01-01-01-07
+Voice Only,Unknown,Unknown,False,01-01-03-02-01-01-07
+Voice Only,Unknown,actor_05,True,01-01-07-01-02-01-07
+Voice Only,Unknown,actor_01,True,01-01-05-01-02-01-07
+Voice Only,Unknown,Unknown,False,01-01-06-02-01-02-07
+Voice Only,Unknown,actor_03,True,01-01-08-02-01-02-07
+Voice Only,Unknown,Unknown,False,01-01-06-01-01-02-07
+Voice Only,Unknown,Unknown,False,01-01-08-02-01-01-07
+Voice Only,Unknown,Unknown,False,01-01-06-02-02-01-07
+Voice Only,Unknown,actor_03,True,01-01-02-01-01-02-07
+Voice Only,Unknown,Unknown,False,01-01-04-01-01-02-07
+Voice Only,Unknown,Unknown,False,01-01-06-01-02-02-07
+Voice Only,Unknown,Unknown,False,01-01-05-01-01-01-07
+Voice Only,Unknown,Unknown,False,01-01-08-02-02-02-07
+Voice Only,Unknown,actor_05,True,01-01-07-01-01-02-07
+Voice Only,Unknown,Unknown,False,01-01-07-02-01-02-07
+Voice Only,Unknown,Unknown,False,01-01-02-01-02-01-07
+Voice Only,Unknown,actor_05,True,01-01-07-01-01-01-07
+Voice Only,Unknown,Unknown,False,01-01-05-02-01-02-07
+Voice Only,Unknown,actor_01,True,01-01-08-02-02-01-07
+Voice Only,Unknown,Unknown,False,01-01-03-02-02-02-07
+Voice Only,Unknown,Unknown,False,01-01-04-02-02-02-07
+Voice Only,Unknown,Unknown,False,01-01-08-01-02-02-07
+Voice Only,Unknown,actor_01,True,01-01-05-01-02-02-07
+Voice Only,Unknown,Unknown,False,01-01-02-02-02-02-07
+Voice Only,Unknown,Unknown,False,01-01-04-02-01-01-07
+Voice Only,Unknown,Unknown,False,01-01-02-02-02-01-07
+Voice Only,Unknown,actor_03,True,01-01-03-01-01-01-07
+Video Only,actor_01,actor_01,True,01-01-06-01-02-02-01
+Video Only,actor_01,actor_01,True,01-01-03-02-01-02-01
+Video Only,actor_01,actor_01,True,01-01-01-01-02-01-01
+Video Only,actor_01,actor_01,True,01-01-06-02-02-02-01
+Video Only,actor_01,actor_01,True,01-01-03-02-01-01-01
+Video Only,actor_02,actor_02,True,01-01-07-02-02-02-02
+Video Only,actor_02,actor_02,True,01-01-08-02-01-01-02
+Video Only,actor_02,actor_02,True,01-01-07-01-02-02-02
+Video Only,actor_02,actor_02,True,01-01-08-02-01-02-02
+Video Only,actor_02,actor_02,True,01-01-05-02-01-01-02
+Video Only,actor_03,actor_03,True,01-01-04-02-02-02-03
+Video Only,actor_03,actor_03,True,01-01-05-01-01-01-03
+Video Only,actor_03,actor_03,True,01-01-05-01-01-02-03
+Video Only,actor_03,actor_03,True,01-01-04-01-02-02-03
+Video Only,actor_03,actor_03,True,01-01-04-01-01-02-03
+Video Only,actor_04,Unknown,False,01-01-02-02-01-02-04
+Video Only,actor_04,Unknown,False,01-01-02-01-01-01-04
+Video Only,actor_04,actor_04,True,01-01-04-01-01-02-04
+Video Only,actor_04,actor_04,True,01-01-01-01-01-02-04
+Video Only,actor_04,actor_04,True,01-01-01-01-01-01-04
+Video Only,actor_05,actor_05,True,01-01-01-01-02-02-05
+Video Only,actor_05,actor_05,True,01-01-06-02-02-02-05
+Video Only,actor_05,actor_05,True,01-01-06-01-02-01-05
+Video Only,actor_05,actor_05,True,01-01-04-01-01-01-05
+Video Only,actor_05,actor_05,True,01-01-04-01-01-02-05
+Video Only,Unknown,Unknown,False,01-01-01-01-01-01-07
+Video Only,Unknown,Unknown,False,01-01-03-02-01-01-07
+Video Only,Unknown,Unknown,False,01-01-07-01-02-01-07
+Video Only,Unknown,Unknown,False,01-01-05-01-02-01-07
+Video Only,Unknown,Unknown,False,01-01-06-02-01-02-07
+Video Only,Unknown,Unknown,False,01-01-08-02-01-02-07
+Video Only,Unknown,Unknown,False,01-01-06-01-01-02-07
+Video Only,Unknown,Unknown,False,01-01-08-02-01-01-07
+Video Only,Unknown,Unknown,False,01-01-06-02-02-01-07
+Video Only,Unknown,Unknown,False,01-01-02-01-01-02-07
+Video Only,Unknown,Unknown,False,01-01-04-01-01-02-07
+Video Only,Unknown,Unknown,False,01-01-06-01-02-02-07
+Video Only,Unknown,Unknown,False,01-01-05-01-01-01-07
+Video Only,Unknown,Unknown,False,01-01-08-02-02-02-07
+Video Only,Unknown,Unknown,False,01-01-07-01-01-02-07
+Video Only,Unknown,Unknown,False,01-01-07-02-01-02-07
+Video Only,Unknown,Unknown,False,01-01-02-01-02-01-07
+Video Only,Unknown,Unknown,False,01-01-07-01-01-01-07
+Video Only,Unknown,Unknown,False,01-01-05-02-01-02-07
+Video Only,Unknown,Unknown,False,01-01-08-02-02-01-07
+Video Only,Unknown,Unknown,False,01-01-03-02-02-02-07
+Video Only,Unknown,Unknown,False,01-01-04-02-02-02-07
+Video Only,Unknown,Unknown,False,01-01-08-01-02-02-07
+Video Only,Unknown,Unknown,False,01-01-05-01-02-02-07
+Video Only,Unknown,Unknown,False,01-01-02-02-02-02-07
+Video Only,Unknown,Unknown,False,01-01-04-02-01-01-07
+Video Only,Unknown,Unknown,False,01-01-02-02-02-01-07
+Video Only,Unknown,Unknown,False,01-01-03-01-01-01-07
+Early Image+Voice,actor_01,actor_01,True,01-01-06-01-02-02-01
+Early Image+Voice,actor_01,actor_01,True,01-01-03-02-01-02-01
+Early Image+Voice,actor_01,actor_01,True,01-01-01-01-02-01-01
+Early Image+Voice,actor_01,actor_01,True,01-01-06-02-02-02-01
+Early Image+Voice,actor_01,Unknown,False,01-01-03-02-01-01-01
+Early Image+Voice,actor_02,actor_02,True,01-01-07-02-02-02-02
+Early Image+Voice,actor_02,actor_02,True,01-01-08-02-01-01-02
+Early Image+Voice,actor_02,actor_02,True,01-01-07-01-02-02-02
+Early Image+Voice,actor_02,actor_02,True,01-01-08-02-01-02-02
+Early Image+Voice,actor_02,actor_02,True,01-01-05-02-01-01-02
+Early Image+Voice,actor_03,actor_03,True,01-01-04-02-02-02-03
+Early Image+Voice,actor_03,actor_03,True,01-01-05-01-01-01-03
+Early Image+Voice,actor_03,actor_03,True,01-01-05-01-01-02-03
+Early Image+Voice,actor_03,actor_03,True,01-01-04-01-02-02-03
+Early Image+Voice,actor_03,actor_03,True,01-01-04-01-01-02-03
+Early Image+Voice,actor_04,Unknown,False,01-01-02-02-01-02-04
+Early Image+Voice,actor_04,actor_04,True,01-01-02-01-01-01-04
+Early Image+Voice,actor_04,actor_04,True,01-01-04-01-01-02-04
+Early Image+Voice,actor_04,actor_04,True,01-01-01-01-01-02-04
+Early Image+Voice,actor_04,actor_04,True,01-01-01-01-01-01-04
+Early Image+Voice,actor_05,Unknown,False,01-01-01-01-02-02-05
+Early Image+Voice,actor_05,actor_05,True,01-01-06-02-02-02-05
+Early Image+Voice,actor_05,actor_05,True,01-01-06-01-02-01-05
+Early Image+Voice,actor_05,actor_05,True,01-01-04-01-01-01-05
+Early Image+Voice,actor_05,actor_05,True,01-01-04-01-01-02-05
+Early Image+Voice,Unknown,Unknown,False,01-01-01-01-01-01-07
+Early Image+Voice,Unknown,Unknown,False,01-01-03-02-01-01-07
+Early Image+Voice,Unknown,Unknown,False,01-01-07-01-02-01-07
+Early Image+Voice,Unknown,Unknown,False,01-01-05-01-02-01-07
+Early Image+Voice,Unknown,Unknown,False,01-01-06-02-01-02-07
+Early Image+Voice,Unknown,Unknown,False,01-01-08-02-01-02-07
+Early Image+Voice,Unknown,Unknown,False,01-01-06-01-01-02-07
+Early Image+Voice,Unknown,Unknown,False,01-01-08-02-01-01-07
+Early Image+Voice,Unknown,Unknown,False,01-01-06-02-02-01-07
+Early Image+Voice,Unknown,Unknown,False,01-01-02-01-01-02-07
+Early Image+Voice,Unknown,Unknown,False,01-01-04-01-01-02-07
+Early Image+Voice,Unknown,Unknown,False,01-01-06-01-02-02-07
+Early Image+Voice,Unknown,Unknown,False,01-01-05-01-01-01-07
+Early Image+Voice,Unknown,Unknown,False,01-01-08-02-02-02-07
+Early Image+Voice,Unknown,Unknown,False,01-01-07-01-01-02-07
+Early Image+Voice,Unknown,Unknown,False,01-01-07-02-01-02-07
+Early Image+Voice,Unknown,Unknown,False,01-01-02-01-02-01-07
+Early Image+Voice,Unknown,Unknown,False,01-01-07-01-01-01-07
+Early Image+Voice,Unknown,Unknown,False,01-01-05-02-01-02-07
+Early Image+Voice,Unknown,Unknown,False,01-01-08-02-02-01-07
+Early Image+Voice,Unknown,actor_01,True,01-01-03-02-02-02-07
+Early Image+Voice,Unknown,Unknown,False,01-01-04-02-02-02-07
+Early Image+Voice,Unknown,Unknown,False,01-01-08-01-02-02-07
+Early Image+Voice,Unknown,Unknown,False,01-01-05-01-02-02-07
+Early Image+Voice,Unknown,Unknown,False,01-01-02-02-02-02-07
+Early Image+Voice,Unknown,Unknown,False,01-01-04-02-01-01-07
+Early Image+Voice,Unknown,Unknown,False,01-01-02-02-02-01-07
+Early Image+Voice,Unknown,Unknown,False,01-01-03-01-01-01-07
+Early Video+Voice,actor_01,actor_01,True,01-01-06-01-02-02-01
+Early Video+Voice,actor_01,actor_01,True,01-01-03-02-01-02-01
+Early Video+Voice,actor_01,actor_01,True,01-01-01-01-02-01-01
+Early Video+Voice,actor_01,actor_01,True,01-01-06-02-02-02-01
+Early Video+Voice,actor_01,Unknown,False,01-01-03-02-01-01-01
+Early Video+Voice,actor_02,actor_02,True,01-01-07-02-02-02-02
+Early Video+Voice,actor_02,actor_02,True,01-01-08-02-01-01-02
+Early Video+Voice,actor_02,actor_02,True,01-01-07-01-02-02-02
+Early Video+Voice,actor_02,actor_02,True,01-01-08-02-01-02-02
+Early Video+Voice,actor_02,actor_02,True,01-01-05-02-01-01-02
+Early Video+Voice,actor_03,actor_03,True,01-01-04-02-02-02-03
+Early Video+Voice,actor_03,actor_03,True,01-01-05-01-01-01-03
+Early Video+Voice,actor_03,actor_03,True,01-01-05-01-01-02-03
+Early Video+Voice,actor_03,actor_03,True,01-01-04-01-02-02-03
+Early Video+Voice,actor_03,actor_03,True,01-01-04-01-01-02-03
+Early Video+Voice,actor_04,Unknown,False,01-01-02-02-01-02-04
+Early Video+Voice,actor_04,Unknown,False,01-01-02-01-01-01-04
+Early Video+Voice,actor_04,actor_04,True,01-01-04-01-01-02-04
+Early Video+Voice,actor_04,actor_04,True,01-01-01-01-01-02-04
+Early Video+Voice,actor_04,actor_04,True,01-01-01-01-01-01-04
+Early Video+Voice,actor_05,actor_05,True,01-01-01-01-02-02-05
+Early Video+Voice,actor_05,actor_05,True,01-01-06-02-02-02-05
+Early Video+Voice,actor_05,actor_05,True,01-01-06-01-02-01-05
+Early Video+Voice,actor_05,actor_05,True,01-01-04-01-01-01-05
+Early Video+Voice,actor_05,actor_05,True,01-01-04-01-01-02-05
+Early Video+Voice,Unknown,Unknown,False,01-01-01-01-01-01-07
+Early Video+Voice,Unknown,Unknown,False,01-01-03-02-01-01-07
+Early Video+Voice,Unknown,Unknown,False,01-01-07-01-02-01-07
+Early Video+Voice,Unknown,Unknown,False,01-01-05-01-02-01-07
+Early Video+Voice,Unknown,Unknown,False,01-01-06-02-01-02-07
+Early Video+Voice,Unknown,Unknown,False,01-01-08-02-01-02-07
+Early Video+Voice,Unknown,Unknown,False,01-01-06-01-01-02-07
+Early Video+Voice,Unknown,Unknown,False,01-01-08-02-01-01-07
+Early Video+Voice,Unknown,Unknown,False,01-01-06-02-02-01-07
+Early Video+Voice,Unknown,Unknown,False,01-01-02-01-01-02-07
+Early Video+Voice,Unknown,Unknown,False,01-01-04-01-01-02-07
+Early Video+Voice,Unknown,Unknown,False,01-01-06-01-02-02-07
+Early Video+Voice,Unknown,Unknown,False,01-01-05-01-01-01-07
+Early Video+Voice,Unknown,Unknown,False,01-01-08-02-02-02-07
+Early Video+Voice,Unknown,Unknown,False,01-01-07-01-01-02-07
+Early Video+Voice,Unknown,Unknown,False,01-01-07-02-01-02-07
+Early Video+Voice,Unknown,Unknown,False,01-01-02-01-02-01-07
+Early Video+Voice,Unknown,Unknown,False,01-01-07-01-01-01-07
+Early Video+Voice,Unknown,Unknown,False,01-01-05-02-01-02-07
+Early Video+Voice,Unknown,Unknown,False,01-01-08-02-02-01-07
+Early Video+Voice,Unknown,Unknown,False,01-01-03-02-02-02-07
+Early Video+Voice,Unknown,Unknown,False,01-01-04-02-02-02-07
+Early Video+Voice,Unknown,Unknown,False,01-01-08-01-02-02-07
+Early Video+Voice,Unknown,Unknown,False,01-01-05-01-02-02-07
+Early Video+Voice,Unknown,Unknown,False,01-01-02-02-02-02-07
+Early Video+Voice,Unknown,Unknown,False,01-01-04-02-01-01-07
+Early Video+Voice,Unknown,Unknown,False,01-01-02-02-02-01-07
+Early Video+Voice,Unknown,Unknown,False,01-01-03-01-01-01-07
+Early Image+Video,actor_01,actor_01,True,01-01-06-01-02-02-01
+Early Image+Video,actor_01,actor_01,True,01-01-03-02-01-02-01
+Early Image+Video,actor_01,actor_01,True,01-01-01-01-02-01-01
+Early Image+Video,actor_01,actor_01,True,01-01-06-02-02-02-01
+Early Image+Video,actor_01,Unknown,False,01-01-03-02-01-01-01
+Early Image+Video,actor_02,actor_02,True,01-01-07-02-02-02-02
+Early Image+Video,actor_02,actor_02,True,01-01-08-02-01-01-02
+Early Image+Video,actor_02,actor_02,True,01-01-07-01-02-02-02
+Early Image+Video,actor_02,actor_02,True,01-01-08-02-01-02-02
+Early Image+Video,actor_02,actor_02,True,01-01-05-02-01-01-02
+Early Image+Video,actor_03,actor_03,True,01-01-04-02-02-02-03
+Early Image+Video,actor_03,actor_03,True,01-01-05-01-01-01-03
+Early Image+Video,actor_03,actor_03,True,01-01-05-01-01-02-03
+Early Image+Video,actor_03,actor_03,True,01-01-04-01-02-02-03
+Early Image+Video,actor_03,actor_03,True,01-01-04-01-01-02-03
+Early Image+Video,actor_04,Unknown,False,01-01-02-02-01-02-04
+Early Image+Video,actor_04,Unknown,False,01-01-02-01-01-01-04
+Early Image+Video,actor_04,actor_04,True,01-01-04-01-01-02-04
+Early Image+Video,actor_04,actor_04,True,01-01-01-01-01-02-04
+Early Image+Video,actor_04,actor_04,True,01-01-01-01-01-01-04
+Early Image+Video,actor_05,actor_05,True,01-01-01-01-02-02-05
+Early Image+Video,actor_05,actor_05,True,01-01-06-02-02-02-05
+Early Image+Video,actor_05,actor_05,True,01-01-06-01-02-01-05
+Early Image+Video,actor_05,actor_05,True,01-01-04-01-01-01-05
+Early Image+Video,actor_05,actor_05,True,01-01-04-01-01-02-05
+Early Image+Video,Unknown,Unknown,False,01-01-01-01-01-01-07
+Early Image+Video,Unknown,Unknown,False,01-01-03-02-01-01-07
+Early Image+Video,Unknown,Unknown,False,01-01-07-01-02-01-07
+Early Image+Video,Unknown,Unknown,False,01-01-05-01-02-01-07
+Early Image+Video,Unknown,Unknown,False,01-01-06-02-01-02-07
+Early Image+Video,Unknown,Unknown,False,01-01-08-02-01-02-07
+Early Image+Video,Unknown,Unknown,False,01-01-06-01-01-02-07
+Early Image+Video,Unknown,Unknown,False,01-01-08-02-01-01-07
+Early Image+Video,Unknown,Unknown,False,01-01-06-02-02-01-07
+Early Image+Video,Unknown,Unknown,False,01-01-02-01-01-02-07
+Early Image+Video,Unknown,Unknown,False,01-01-04-01-01-02-07
+Early Image+Video,Unknown,Unknown,False,01-01-06-01-02-02-07
+Early Image+Video,Unknown,Unknown,False,01-01-05-01-01-01-07
+Early Image+Video,Unknown,Unknown,False,01-01-08-02-02-02-07
+Early Image+Video,Unknown,Unknown,False,01-01-07-01-01-02-07
+Early Image+Video,Unknown,Unknown,False,01-01-07-02-01-02-07
+Early Image+Video,Unknown,Unknown,False,01-01-02-01-02-01-07
+Early Image+Video,Unknown,Unknown,False,01-01-07-01-01-01-07
+Early Image+Video,Unknown,Unknown,False,01-01-05-02-01-02-07
+Early Image+Video,Unknown,Unknown,False,01-01-08-02-02-01-07
+Early Image+Video,Unknown,Unknown,False,01-01-03-02-02-02-07
+Early Image+Video,Unknown,Unknown,False,01-01-04-02-02-02-07
+Early Image+Video,Unknown,Unknown,False,01-01-08-01-02-02-07
+Early Image+Video,Unknown,Unknown,False,01-01-05-01-02-02-07
+Early Image+Video,Unknown,Unknown,False,01-01-02-02-02-02-07
+Early Image+Video,Unknown,Unknown,False,01-01-04-02-01-01-07
+Early Image+Video,Unknown,Unknown,False,01-01-02-02-02-01-07
+Early Image+Video,Unknown,Unknown,False,01-01-03-01-01-01-07
+Early All Three,actor_01,actor_01,True,01-01-06-01-02-02-01
+Early All Three,actor_01,actor_01,True,01-01-03-02-01-02-01
+Early All Three,actor_01,actor_01,True,01-01-01-01-02-01-01
+Early All Three,actor_01,actor_01,True,01-01-06-02-02-02-01
+Early All Three,actor_01,Unknown,False,01-01-03-02-01-01-01
+Early All Three,actor_02,actor_02,True,01-01-07-02-02-02-02
+Early All Three,actor_02,actor_02,True,01-01-08-02-01-01-02
+Early All Three,actor_02,actor_02,True,01-01-07-01-02-02-02
+Early All Three,actor_02,actor_02,True,01-01-08-02-01-02-02
+Early All Three,actor_02,actor_02,True,01-01-05-02-01-01-02
+Early All Three,actor_03,actor_03,True,01-01-04-02-02-02-03
+Early All Three,actor_03,actor_03,True,01-01-05-01-01-01-03
+Early All Three,actor_03,actor_03,True,01-01-05-01-01-02-03
+Early All Three,actor_03,actor_03,True,01-01-04-01-02-02-03
+Early All Three,actor_03,actor_03,True,01-01-04-01-01-02-03
+Early All Three,actor_04,actor_04,True,01-01-02-02-01-02-04
+Early All Three,actor_04,Unknown,False,01-01-02-01-01-01-04
+Early All Three,actor_04,actor_04,True,01-01-04-01-01-02-04
+Early All Three,actor_04,actor_04,True,01-01-01-01-01-02-04
+Early All Three,actor_04,actor_04,True,01-01-01-01-01-01-04
+Early All Three,actor_05,actor_05,True,01-01-01-01-02-02-05
+Early All Three,actor_05,actor_05,True,01-01-06-02-02-02-05
+Early All Three,actor_05,actor_05,True,01-01-06-01-02-01-05
+Early All Three,actor_05,actor_05,True,01-01-04-01-01-01-05
+Early All Three,actor_05,actor_05,True,01-01-04-01-01-02-05
+Early All Three,Unknown,Unknown,False,01-01-01-01-01-01-07
+Early All Three,Unknown,Unknown,False,01-01-03-02-01-01-07
+Early All Three,Unknown,Unknown,False,01-01-07-01-02-01-07
+Early All Three,Unknown,Unknown,False,01-01-05-01-02-01-07
+Early All Three,Unknown,Unknown,False,01-01-06-02-01-02-07
+Early All Three,Unknown,Unknown,False,01-01-08-02-01-02-07
+Early All Three,Unknown,Unknown,False,01-01-06-01-01-02-07
+Early All Three,Unknown,Unknown,False,01-01-08-02-01-01-07
+Early All Three,Unknown,Unknown,False,01-01-06-02-02-01-07
+Early All Three,Unknown,Unknown,False,01-01-02-01-01-02-07
+Early All Three,Unknown,Unknown,False,01-01-04-01-01-02-07
+Early All Three,Unknown,Unknown,False,01-01-06-01-02-02-07
+Early All Three,Unknown,Unknown,False,01-01-05-01-01-01-07
+Early All Three,Unknown,Unknown,False,01-01-08-02-02-02-07
+Early All Three,Unknown,Unknown,False,01-01-07-01-01-02-07
+Early All Three,Unknown,Unknown,False,01-01-07-02-01-02-07
+Early All Three,Unknown,Unknown,False,01-01-02-01-02-01-07
+Early All Three,Unknown,Unknown,False,01-01-07-01-01-01-07
+Early All Three,Unknown,Unknown,False,01-01-05-02-01-02-07
+Early All Three,Unknown,Unknown,False,01-01-08-02-02-01-07
+Early All Three,Unknown,Unknown,False,01-01-03-02-02-02-07
+Early All Three,Unknown,Unknown,False,01-01-04-02-02-02-07
+Early All Three,Unknown,Unknown,False,01-01-08-01-02-02-07
+Early All Three,Unknown,Unknown,False,01-01-05-01-02-02-07
+Early All Three,Unknown,Unknown,False,01-01-02-02-02-02-07
+Early All Three,Unknown,Unknown,False,01-01-04-02-01-01-07
+Early All Three,Unknown,Unknown,False,01-01-02-02-02-01-07
+Early All Three,Unknown,Unknown,False,01-01-03-01-01-01-07
+Late Fusion,actor_01,actor_01,True,01-01-06-01-02-02-01
+Late Fusion,actor_01,actor_01,True,01-01-03-02-01-02-01
+Late Fusion,actor_01,actor_01,True,01-01-01-01-02-01-01
+Late Fusion,actor_01,actor_01,True,01-01-06-02-02-02-01
+Late Fusion,actor_01,actor_01,True,01-01-03-02-01-01-01
+Late Fusion,actor_02,actor_02,True,01-01-07-02-02-02-02
+Late Fusion,actor_02,actor_02,True,01-01-08-02-01-01-02
+Late Fusion,actor_02,actor_02,True,01-01-07-01-02-02-02
+Late Fusion,actor_02,actor_02,True,01-01-08-02-01-02-02
+Late Fusion,actor_02,actor_02,True,01-01-05-02-01-01-02
+Late Fusion,actor_03,actor_03,True,01-01-04-02-02-02-03
+Late Fusion,actor_03,actor_03,True,01-01-05-01-01-01-03
+Late Fusion,actor_03,actor_03,True,01-01-05-01-01-02-03
+Late Fusion,actor_03,actor_03,True,01-01-04-01-02-02-03
+Late Fusion,actor_03,actor_03,True,01-01-04-01-01-02-03
+Late Fusion,actor_04,Unknown,False,01-01-02-02-01-02-04
+Late Fusion,actor_04,actor_04,True,01-01-02-01-01-01-04
+Late Fusion,actor_04,actor_04,True,01-01-04-01-01-02-04
+Late Fusion,actor_04,actor_04,True,01-01-01-01-01-02-04
+Late Fusion,actor_04,actor_04,True,01-01-01-01-01-01-04
+Late Fusion,actor_05,Unknown,False,01-01-01-01-02-02-05
+Late Fusion,actor_05,actor_05,True,01-01-06-02-02-02-05
+Late Fusion,actor_05,actor_05,True,01-01-06-01-02-01-05
+Late Fusion,actor_05,actor_05,True,01-01-04-01-01-01-05
+Late Fusion,actor_05,actor_05,True,01-01-04-01-01-02-05
+Late Fusion,Unknown,Unknown,False,01-01-01-01-01-01-07
+Late Fusion,Unknown,Unknown,False,01-01-03-02-01-01-07
+Late Fusion,Unknown,Unknown,False,01-01-07-01-02-01-07
+Late Fusion,Unknown,Unknown,False,01-01-05-01-02-01-07
+Late Fusion,Unknown,Unknown,False,01-01-06-02-01-02-07
+Late Fusion,Unknown,Unknown,False,01-01-08-02-01-02-07
+Late Fusion,Unknown,Unknown,False,01-01-06-01-01-02-07
+Late Fusion,Unknown,Unknown,False,01-01-08-02-01-01-07
+Late Fusion,Unknown,Unknown,False,01-01-06-02-02-01-07
+Late Fusion,Unknown,Unknown,False,01-01-02-01-01-02-07
+Late Fusion,Unknown,Unknown,False,01-01-04-01-01-02-07
+Late Fusion,Unknown,Unknown,False,01-01-06-01-02-02-07
+Late Fusion,Unknown,Unknown,False,01-01-05-01-01-01-07
+Late Fusion,Unknown,Unknown,False,01-01-08-02-02-02-07
+Late Fusion,Unknown,actor_05,True,01-01-07-01-01-02-07
+Late Fusion,Unknown,Unknown,False,01-01-07-02-01-02-07
+Late Fusion,Unknown,Unknown,False,01-01-02-01-02-01-07
+Late Fusion,Unknown,Unknown,False,01-01-07-01-01-01-07
+Late Fusion,Unknown,Unknown,False,01-01-05-02-01-02-07
+Late Fusion,Unknown,Unknown,False,01-01-08-02-02-01-07
+Late Fusion,Unknown,Unknown,False,01-01-03-02-02-02-07
+Late Fusion,Unknown,Unknown,False,01-01-04-02-02-02-07
+Late Fusion,Unknown,Unknown,False,01-01-08-01-02-02-07
+Late Fusion,Unknown,Unknown,False,01-01-05-01-02-02-07
+Late Fusion,Unknown,Unknown,False,01-01-02-02-02-02-07
+Late Fusion,Unknown,Unknown,False,01-01-04-02-01-01-07
+Late Fusion,Unknown,Unknown,False,01-01-02-02-02-01-07
+Late Fusion,Unknown,Unknown,False,01-01-03-01-01-01-07
+Hierarchical,actor_01,actor_01,True,01-01-06-01-02-02-01
+Hierarchical,actor_01,actor_01,True,01-01-03-02-01-02-01
+Hierarchical,actor_01,Unknown,False,01-01-01-01-02-01-01
+Hierarchical,actor_01,actor_01,True,01-01-06-02-02-02-01
+Hierarchical,actor_01,Unknown,False,01-01-03-02-01-01-01
+Hierarchical,actor_02,actor_02,True,01-01-07-02-02-02-02
+Hierarchical,actor_02,Unknown,False,01-01-08-02-01-01-02
+Hierarchical,actor_02,actor_02,True,01-01-07-01-02-02-02
+Hierarchical,actor_02,Unknown,False,01-01-08-02-01-02-02
+Hierarchical,actor_02,actor_02,True,01-01-05-02-01-01-02
+Hierarchical,actor_03,Unknown,False,01-01-04-02-02-02-03
+Hierarchical,actor_03,actor_03,True,01-01-05-01-01-01-03
+Hierarchical,actor_03,actor_03,True,01-01-05-01-01-02-03
+Hierarchical,actor_03,actor_03,True,01-01-04-01-02-02-03
+Hierarchical,actor_03,actor_03,True,01-01-04-01-01-02-03
+Hierarchical,actor_04,Unknown,False,01-01-02-02-01-02-04
+Hierarchical,actor_04,Unknown,False,01-01-02-01-01-01-04
+Hierarchical,actor_04,actor_04,True,01-01-04-01-01-02-04
+Hierarchical,actor_04,actor_04,True,01-01-01-01-01-02-04
+Hierarchical,actor_04,Unknown,False,01-01-01-01-01-01-04
+Hierarchical,actor_05,Unknown,False,01-01-01-01-02-02-05
+Hierarchical,actor_05,Unknown,False,01-01-06-02-02-02-05
+Hierarchical,actor_05,Unknown,False,01-01-06-01-02-01-05
+Hierarchical,actor_05,actor_05,True,01-01-04-01-01-01-05
+Hierarchical,actor_05,actor_05,True,01-01-04-01-01-02-05
+Hierarchical,Unknown,Unknown,False,01-01-01-01-01-01-07
+Hierarchical,Unknown,Unknown,False,01-01-03-02-01-01-07
+Hierarchical,Unknown,Unknown,False,01-01-07-01-02-01-07
+Hierarchical,Unknown,Unknown,False,01-01-05-01-02-01-07
+Hierarchical,Unknown,Unknown,False,01-01-06-02-01-02-07
+Hierarchical,Unknown,Unknown,False,01-01-08-02-01-02-07
+Hierarchical,Unknown,Unknown,False,01-01-06-01-01-02-07
+Hierarchical,Unknown,Unknown,False,01-01-08-02-01-01-07
+Hierarchical,Unknown,Unknown,False,01-01-06-02-02-01-07
+Hierarchical,Unknown,Unknown,False,01-01-02-01-01-02-07
+Hierarchical,Unknown,Unknown,False,01-01-04-01-01-02-07
+Hierarchical,Unknown,Unknown,False,01-01-06-01-02-02-07
+Hierarchical,Unknown,Unknown,False,01-01-05-01-01-01-07
+Hierarchical,Unknown,Unknown,False,01-01-08-02-02-02-07
+Hierarchical,Unknown,Unknown,False,01-01-07-01-01-02-07
+Hierarchical,Unknown,Unknown,False,01-01-07-02-01-02-07
+Hierarchical,Unknown,Unknown,False,01-01-02-01-02-01-07
+Hierarchical,Unknown,Unknown,False,01-01-07-01-01-01-07
+Hierarchical,Unknown,Unknown,False,01-01-05-02-01-02-07
+Hierarchical,Unknown,Unknown,False,01-01-08-02-02-01-07
+Hierarchical,Unknown,Unknown,False,01-01-03-02-02-02-07
+Hierarchical,Unknown,Unknown,False,01-01-04-02-02-02-07
+Hierarchical,Unknown,Unknown,False,01-01-08-01-02-02-07
+Hierarchical,Unknown,Unknown,False,01-01-05-01-02-02-07
+Hierarchical,Unknown,Unknown,False,01-01-02-02-02-02-07
+Hierarchical,Unknown,Unknown,False,01-01-04-02-01-01-07
+Hierarchical,Unknown,Unknown,False,01-01-02-02-02-01-07
+Hierarchical,Unknown,Unknown,False,01-01-03-01-01-01-07

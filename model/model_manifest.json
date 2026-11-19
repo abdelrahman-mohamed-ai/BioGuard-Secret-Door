@@ -1,0 +1,65 @@
+{
+  "version": "2.0",
+  "models": {
+    "Image Only": {
+      "model": "SVM",
+      "threshold": 0.29716524286407703,
+      "modalities": [
+        "image"
+      ]
+    },
+    "Voice Only": {
+      "model": "Random Forest",
+      "threshold": 0.5335897435897436,
+      "modalities": [
+        "voice"
+      ]
+    },
+    "Video Only": {
+      "model": "Random Forest",
+      "threshold": 0.46062271062271065,
+      "modalities": [
+        "video"
+      ]
+    },
+    "Early Image+Voice": {
+      "model": "SVM",
+      "threshold": 0.339183947435582,
+      "modalities": [
+        "image",
+        "voice"
+      ]
+    },
+    "Early Video+Voice": {
+      "model": "Random Forest",
+      "threshold": 0.45576923076923076,
+      "modalities": [
+        "video",
+        "voice"
+      ]
+    },
+    "Early Image+Video": {
+      "model": "Random Forest",
+      "threshold": 0.49461538461538457,
+      "modalities": [
+        "image",
+        "video"
+      ]
+    },
+    "Early All Three": {
+      "model": "Random Forest",
+      "threshold": 0.5067765567765568,
+      "modalities": [
+        "image",
+        "voice",
+        "video"
+      ]
+    }
+  },
+  "feature_config": {
+    "image": "HOG 9/12x12/2x2 + uniform LBP 8,1 on 96x96",
+    "voice": "MFCC13+delta+delta2+ZCR+RMS mean/std at 16kHz 3s",
+    "video": "6 cropped frames HOG+LBP mean/std"
+  },
+  "note": "Use model/public_models.joblib locally; do not upload untrusted pickle/joblib."
+}

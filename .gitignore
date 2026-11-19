@@ -1,0 +1,71 @@
+# Python and local tooling
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# IDE and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Environment variables, credentials, and serialized secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.log
+session_secret.txt
+admin_config.json
+
+# Private BioGuard runtime state: never commit these directories
+flask_game/private_data/
+flask_game/backups/
+flask_game/.runtime/
+flask_game/.staging/
+private_data/
+private_enrollments/
+tmp_debug_enroll/
+
+# Raw research data and local biometric media
+public_data/
+command_data/
+fingerprint_data/
+FINGERPRINT_DEMO/
+raw_ravdess/
+*.wav
+*.mp3
+*.mp4
+*.avi
+*.mov
+*.webm
+
+# Local model/gallery products that may contain user data
+enrollment_gallery.joblib
+face_audit_scores.csv
+voice_audit_scores.csv
+
+# Old local notebook backups
+01_BioGuard_Full_Master_Notebook.backup-*.ipynb
+
+# Temporary archives and packaging output
+*.zip
+*.tar
+*.gz
+dist/
+build/
+*.egg-info/
+
+# Keep the reviewed public model artifacts and evaluation CSVs under model/.
+# Any future model artifact must be reviewed for privacy and provenance first.

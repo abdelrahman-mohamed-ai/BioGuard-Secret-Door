@@ -1,0 +1,3 @@
+model,threshold,val_accuracy,val_balanced_accuracy,val_precision,val_recall_TAR,val_f1,val_FAR,val_FRR,val_ROC_AUC,val_TN,val_FP,val_FN,val_TP,test_accuracy,test_balanced_accuracy,test_precision,test_recall_TAR,test_f1,test_FAR,test_FRR,test_ROC_AUC,test_TN,test_FP,test_FN,test_TP
+SVM,0.8077645335329597,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,150,0,0,75,0.9911111111111112,0.9866666666666667,1.0,0.9733333333333334,0.9864864864864865,0.0,0.02666666666666667,1.0,150,0,2,73
+Random Forest,0.780989010989011,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,150,0,0,75,0.9733333333333334,0.96,1.0,0.92,0.9583333333333334,0.0,0.08,0.9993777777777778,150,0,6,69

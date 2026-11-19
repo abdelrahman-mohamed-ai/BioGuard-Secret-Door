@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  <title>Users // BioGuard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/game.css') }}">
+</head>
+<body class="app-shell console-page" data-csrf="{{ csrf_token() }}">
+  {% include '_nav.html' %}
+  <main class="console-main page-width">
+    <div class="page-heading">
+      <div>
+        <div class="kicker"><span class="status-dot"></span> CONTROL PANEL // LOCAL GALLERY</div>
+        <h1>Enrolled <em>users</em></h1>
+        <p class="lead">Only consented users saved here can be considered by the Secret Door. Public RAVDESS actors are research data, not employees.</p>
+      </div>
+      <div class="heading-actions">
+        <a class="btn btn-primary" href="{{ url_for('admin_enroll') }}">Add new user</a>
+        <button class="btn btn-quiet" type="button" data-back>Back</button>
+      </div>
+    </div>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="alert {{ 'alert-danger' if category == 'error' else 'alert-success' }}">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    {% if storage_error %}
+      <div class="alert alert-danger">{{ storage_error }}</div>
+    {% endif %}
+
+    {% if orphaned_storage %}
+      <section class="card" aria-labelledby="storage-recovery-title" style="padding: 20px; margin-bottom: 22px;">
+        <div class="kicker">STORAGE CONSISTENCY // ADMIN ACTION REQUIRED</div>
+        <h2 id="storage-recovery-title">Orphaned private enrollment storage</h2>
+        <p>These private directories have no matching registry entry. They are not used for authentication. Quarantine moves them into protected recovery storage and does not delete biometric data.</p>
+        {% for orphan in orphaned_storage %}
+          <div class="alert alert-danger" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px;">
+            <span><strong>{{ orphan.identifier }}</strong> - {{ orphan.reason }} {% if not orphan.readable %}The directory is currently unreadable to the server process.{% endif %}</span>
+            <form method="post" action="{{ url_for('admin_storage_recovery', identifier=orphan.identifier) }}" onsubmit="return confirm('Move this orphaned directory to protected recovery storage? No biometric data will be deleted.')">
+              <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+              <input type="hidden" name="confirm" value="yes">
+              <button class="btn btn-danger" type="submit">Quarantine orphan</button>
+            </form>
+          </div>
+        {% endfor %}
+      </section>
+    {% endif %}
+
+    <section class="admin-summary">
+      <div><small>LOCAL USERS</small><strong>{{ users|length }}</strong></div>
+      <div><small>DOOR MODEL</small><strong class="text-live">HIERARCHICAL</strong></div>
+      <div><small>FACE SAMPLES</small><strong>{{ users|sum(attribute='photos') }}</strong></div>
+      <div><small>VOICE SAMPLES</small><strong>{{ users|sum(attribute='recordings') }}</strong></div>
+    </section>
+
+    {% if users %}
+      <section class="user-grid">
+        {% for user in users %}
+          <article class="user-card card">
+            <div class="user-card-top">
+              <div class="avatar-ring">{{ user.display_name[:1]|upper }}</div>
+              <div>
+                <h2>{{ user.display_name }}</h2>
+                <p class="user-id">{{ user.identifier }} - {{ user.role }}</p>
+              </div>
+              <span class="state-pill {{ 'state-active' if user.active else 'state-disabled' }}"><i></i>{{ 'ACTIVE' if user.active else 'DISABLED' }}</span>
+            </div>
+            <div class="enrollment-status">
+              <span><b>FACE</b><strong>{{ user.photos }}/4</strong><small>template ready</small></span>
+              <span><b>VOICE</b><strong>{{ user.recordings }}/4</strong><small>template ready</small></span>
+              <span><b>ACCESS</b><strong>{{ 'YES' if 'open_door' in user.permissions and user.active else 'NO' }}</strong><small>permission gate</small></span>
+            </div>
+            <div class="permission-chips">
+              {% for permission in user.permissions %}<span>{{ permission|replace('_',' ') }}</span>{% else %}<span class="muted">No permissions</span>{% endfor %}
+            </div>
+            <details class="user-details">
+              <summary>View profile and manage access</summary>
+              <div class="profile-grid">
+                <div><small>ENROLLED</small><strong>{{ user.created_utc or 'Local record' }}</strong></div>
+                <div><small>PRIVATE MEDIA</small><strong>{{ user.photos }} face / {{ user.recordings }} voice</strong></div>
+              </div>
+              <form method="post" action="{{ url_for('api_admin_user', identifier=user.identifier) }}" class="manage-form">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <label>Account state<select name="active"><option value="true" {% if user.active %}selected{% endif %}>Active</option><option value="false" {% if not user.active %}selected{% endif %}>Disabled</option></select></label>
+                <label>Role<select name="role">{% for role in roles %}<option value="{{ role }}" {% if role == user.role %}selected{% endif %}>{{ role|title }}</option>{% endfor %}</select></label>
+                <div class="manage-permissions">
+                  {% for key in access_permissions %}<label><input type="checkbox" name="access_permissions" value="{{ key }}" {% if key in user.permissions %}checked{% endif %}> {{ access_permissions[key] }}</label>{% endfor %}
+                </div>
+                <button class="btn btn-secondary" type="submit">Update permissions</button>
+              </form>
+              <div class="user-actions">
+                <a class="btn btn-quiet" href="{{ url_for('admin_enroll', re_enroll=user.identifier) }}">Replace biometric samples</a>
+                <form method="post" action="{{ url_for('api_admin_user', identifier=user.identifier) }}" onsubmit="return confirm('Delete this user and private enrollment media?')">
+                  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                  <input type="hidden" name="action" value="delete">
+                  <button class="btn btn-danger" type="submit">Delete user</button>
+                </form>
+              </div>
+            </details>
+          </article>
+        {% endfor %}
+      </section>
+    {% else %}
+      <section class="empty-card card">
+        <div class="empty-orb">+</div>
+        <h2>No users yet</h2>
+        <p>This is the correct first-run state. Add a consenting person with four face images and four voice samples to create the first local gallery template.</p>
+        <a class="btn btn-primary btn-xl" href="{{ url_for('admin_enroll') }}">Add first user</a>
+      </section>
+    {% endif %}
+    <div class="console-footer"><a href="{{ url_for('admin_analytics') }}">View exported model reports</a><span>Raw media stays outside <code>static/</code>.</span></div>
+  </main>
+</body>
+</html>

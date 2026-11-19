@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  <title>Enter Facility // BioGuard</title><link rel="stylesheet" href="{{ url_for('static', filename='css/game.css') }}">
+</head>
+<body class="app-shell game-page" data-csrf="{{ csrf_token() }}" data-admin="{{ 'true' if session.get('admin_authenticated') else 'false' }}">
+  {% include '_nav.html' %}
+  <main class="game-main page-width">
+    <div class="game-toolbar"><div><div class="kicker"><span class="status-dot"></span> LIVE VERIFICATION // FACILITY 07</div><h1>Approach the <em>Secret Door</em></h1></div><div class="toolbar-actions"><button class="btn btn-quiet" type="button" data-back>← Back</button><button class="btn btn-quiet" type="button" data-restart>Restart</button><button id="mute-toggle" class="btn btn-quiet" type="button">Sound on</button></div></div>
+    <section class="game-grid">
+      <article class="capture-panel card">
+        <div class="panel-top"><span>01 / OPTICAL CHANNEL</span><b id="camera-state">STANDBY</b></div>
+        <div class="camera-window" id="camera-window"><video id="camera-feed" autoplay muted playsinline aria-label="Live camera preview"></video><canvas id="capture-canvas" class="hidden"></canvas><div id="camera-placeholder" class="camera-placeholder"><div class="crosshair"><i></i></div><strong>CAMERA OFF</strong><small>Press START FACE SCAN to begin</small></div><div class="hud-corners"></div><div class="hud-grid"></div><div class="scan-line"></div><span class="camera-label">LIVE FRAME / <span id="camera-timer">00:00</span></span></div>
+        <div class="panel-controls"><button id="start-scan" class="btn btn-primary" type="button">Start face scan <span>→</span></button><button id="stop-scan" class="btn btn-quiet" type="button" disabled>Stop camera</button></div>
+      </article>
+      <article class="door-panel-card card" id="door-card">
+        <div class="panel-top"><span>02 / MECHANICAL AIRLOCK</span><b id="door-state" class="state-locked">LOCKED</b></div>
+        <div class="door-viewport"><div class="door-depth"></div><div class="door-light-column"></div><div class="security-door door-left"><i></i><i></i><i></i></div><div class="security-door door-right"><i></i><i></i><i></i></div><div class="door-aperture"><div class="aperture-glow"></div><div class="aperture-copy"><span id="door-code">BG-07</span><strong id="door-message">AWAITING IDENTITY</strong><small>FACE + VOICE REQUIRED</small></div></div><div class="door-floor"></div></div>
+      </article>
+    </section>
+    <section class="verification-panel card">
+      <div class="step-bar"><div class="progress-step active" data-step="face"><span>01</span><b>FACE</b><small>Find candidate</small></div><div class="progress-connector"></div><div class="progress-step" data-step="voice"><span>02</span><b>VOICE</b><small>Same candidate</small></div><div class="progress-connector"></div><div class="progress-step" data-step="permission"><span>03</span><b>ACCESS</b><small>Permission check</small></div></div>
+      <div class="verification-copy"><div><div class="kicker" id="verification-phase">IDLE</div><h2 id="verification-title">Start the face scan when you are ready.</h2><p id="verification-detail">The server checks the face first. Only an accepted face candidate is asked for a voice recording.</p></div><div class="verification-side"><div class="auth-state-box"><small>AUTH STATE</small><strong id="auth-state">IDLE</strong></div><div id="voice-meter" class="voice-meter" aria-label="Voice recording meter"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div>
+      <div class="panel-controls verify-controls"><button id="verify-button" class="btn btn-primary btn-xl" type="button" disabled>Capture face <span>→</span></button><button id="start-voice" class="btn btn-primary btn-xl" type="button" hidden>Start voice verification <span>→</span></button><button id="retry-button" class="btn btn-secondary" type="button" hidden>Retry attempt</button></div><div id="result-banner" class="result-banner" role="status" aria-live="polite" hidden></div>
+    </section>
+
+    <section class="command-section card" id="command-section"><div class="panel-top"><span>03 / VOICE COMMAND MODE // CAMERA OFF</span><b id="command-state">LOCKED</b></div><div class="command-body"><div class="command-orb"><span>MIC</span></div><div><h2>Control the gate by voice</h2><p>Speaker verification, command confidence, and permission are checked separately. Use the trained words <code>go</code> or <code>stop</code>.</p></div></div><div class="command-controls"><button id="record-speaker" class="btn btn-secondary" type="button">Record speaker check <small>3 sec</small></button><button id="record-command" class="btn btn-primary" type="button" disabled>Record command <small>1 sec</small></button><button id="send-command" class="btn btn-quiet" type="button" disabled>Authorize command</button></div><p id="command-message" class="tiny-note">The camera is disabled in this mode.</p></section>
+
+    <details id="diagnostics-panel" class="diagnostics-panel card" hidden><summary>Developer diagnostics <span>Admin view / real model scores only</span></summary><div id="diagnostics-body" class="diagnostics-body"></div></details>
+    <p class="legal-note">Educational local demonstration. Local-gallery thresholds are loaded from the versioned matching configuration; public model thresholds remain diagnostics only. No anti-spoofing guarantee is made. Any processing error leaves the door locked.</p>
+  </main>
+  <script src="{{ url_for('static', filename='js/capture.js') }}"></script><script src="{{ url_for('static', filename='js/game.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<header class="topbar">
+  <a class="brand" href="{{ url_for('index') }}" aria-label="BioGuard home">
+    <span class="brand-mark">BG</span>
+    <span><strong>BIOGUARD</strong><small>SECRET DOOR // LOCAL FACILITY</small></span>
+  </a>
+  <nav class="nav-links" aria-label="Primary navigation">
+    <a href="{{ url_for('index') }}">Home</a>
+    <a href="{{ url_for('game') }}">Enter facility</a>
+    <a href="{{ url_for('fingerprint_lab') }}">Fingerprint lab</a>
+    {% if session.get('admin_authenticated') %}
+      <a href="{{ url_for('admin_users') }}">Control panel</a>
+      <a href="{{ url_for('admin_enroll') }}">Add user</a>
+      <a href="{{ url_for('admin_logout') }}">Sign out</a>
+    {% elif setup_required %}
+      <a class="nav-accent" href="{{ url_for('admin_setup') }}">Admin setup</a>
+    {% else %}
+      <a class="nav-accent" href="{{ url_for('admin_login') }}">Admin</a>
+    {% endif %}
+    <button id="fullscreen-toggle" class="nav-icon" type="button" aria-label="Toggle fullscreen">⛶</button>
+  </nav>
+</header>
+<script src="{{ url_for('static', filename='js/ui.js') }}"></script>

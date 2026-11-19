@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  <title>Fingerprint Lab // BioGuard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/game.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/fingerprint.css') }}">
+</head>
+<body class="app-shell console-page fingerprint-page">
+  {% include '_nav.html' %}
+  {% set visuals = result.get('visualizations', {}) if result else {} %}
+  <main class="fingerprint-main page-width">
+    <div class="page-heading fingerprint-heading">
+      <div>
+        <div class="kicker"><span class="status-dot"></span> ACADEMIC BONUS // OFFLINE ONLY</div>
+        <h1>Fingerprint <em>lab</em></h1>
+        <p class="lead">Upload a fingerprint image to run the existing Sobel + uniform LBP traditional-ML matcher. This lab never participates in Secret Door access.</p>
+      </div>
+      <div class="heading-actions">
+        <button class="btn btn-quiet" type="button" data-back>Back</button>
+        <a class="btn btn-quiet" href="{{ url_for('index') }}">Home</a>
+        <button class="btn btn-quiet" type="button" id="fingerprint-reset-top">New scan</button>
+      </div>
+    </div>
+
+    <section class="fingerprint-workspace" aria-label="Fingerprint offline verification">
+      <form id="fingerprint-form" class="finger-form card" action="{{ url_for('fingerprint_upload') }}" method="post" enctype="multipart/form-data" novalidate>
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <div class="kicker">01 // SELECT IMAGE</div>
+        <h2>Prepare a fingerprint scan</h2>
+        <p class="panel-copy">Choose a PNG, JPG, JPEG, or BMP file. The upload is processed in a private temporary directory and removed after the result is returned.</p>
+
+        <label class="upload-dropzone" for="fingerprint_image" id="fingerprint-dropzone">
+          <span class="upload-glyph" aria-hidden="true">FP</span>
+          <span class="upload-title">Choose fingerprint image</span>
+          <span class="upload-hint">PNG / JPG / JPEG / BMP</span>
+          <input id="fingerprint_image" name="fingerprint_image" type="file" accept="image/png,image/jpeg,image/bmp,.png,.jpg,.jpeg,.bmp">
+        </label>
+
+        <div class="fingerprint-preview-frame" id="fingerprint-preview-frame" hidden>
+          <img id="fingerprint-preview" alt="Selected fingerprint preview">
+          <div class="preview-meta">
+            <strong id="fingerprint-file-name">Selected image</strong>
+            <span id="fingerprint-file-status">Ready to run</span>
+          </div>
+        </div>
+        <div class="fingerprint-placeholder" id="fingerprint-preview-placeholder">Your selected image preview will appear here.</div>
+
+        <div class="fingerprint-action-row">
+          <button class="btn btn-primary btn-xl" id="fingerprint-submit" type="submit">Run offline match <span aria-hidden="true">→</span></button>
+          <button class="btn btn-quiet" id="fingerprint-new-upload" type="button">Clear and choose another</button>
+        </div>
+        <div class="fingerprint-status" id="fingerprint-status" role="status" aria-live="polite">
+          <span class="status-light" aria-hidden="true"></span>
+          <span id="fingerprint-status-text">Waiting for an image.</span>
+        </div>
+      </form>
+
+      <aside class="fingerprint-side card">
+        <div class="kicker">02 // REAL PIPELINE</div>
+        <h2>What the lab shows</h2>
+        <ol class="pipeline-list">
+          <li><span>01</span><strong>Image decode</strong><small>Private upload validation</small></li>
+          <li><span>02</span><strong>Grayscale + resize</strong><small>128 × 128 equalized image</small></li>
+          <li><span>03</span><strong>Sobel + LBP</strong><small>29-D feature vector</small></li>
+          <li><span>04</span><strong>Trained SVM</strong><small>30-D pair features + threshold</small></li>
+        </ol>
+        <p class="legal-note">The demo artifact uses SOCOFing original-vs-synthetic altered probes. A match here is an academic model decision, not an anti-spoofing or live-scanner guarantee.</p>
+      </aside>
+    </section>
+
+    <section class="fingerprint-result card" id="fingerprint-result" {% if not result %}hidden{% endif %} aria-live="polite">
+      <div class="result-header">
+        <div>
+          <div class="kicker">REAL MODEL DECISION // 03</div>
+          <h2 id="fingerprint-decision">{{ result.decision if result else 'RESULT PENDING' }}</h2>
+          <p id="fingerprint-reason">{{ result.reason if result else 'Run a scan to see the genuine model decision.' }}</p>
+        </div>
+        <div class="result-badge" id="fingerprint-result-badge">{{ 'MATCH' if result and result.match else 'NO MATCH' if result else '—' }}</div>
+      </div>
+
+      <div class="fingerprint-metrics" id="fingerprint-metrics">
+        <div><span>Score</span><strong id="fingerprint-score">{% if result and result.score is defined and result.score is not none %}{{ '%.4f'|format(result.score) }}{% else %}—{% endif %}</strong></div>
+        <div><span>Threshold</span><strong id="fingerprint-threshold">{% if result and result.threshold is defined and result.threshold is not none %}{{ '%.4f'|format(result.threshold) }}{% else %}—{% endif %}</strong></div>
+        <div><span>Model</span><strong id="fingerprint-model">{{ result.model_name if result and result.model_name else '—' }}</strong></div>
+        <div><span>Reference gallery</span><strong id="fingerprint-gallery">{{ result.gallery_count if result and result.gallery_count else '—' }}</strong></div>
+      </div>
+      <div class="fingerprint-error" id="fingerprint-error" {% if not result or not result.error_code %}hidden{% endif %}>
+        <strong id="fingerprint-error-code">{{ result.error_code if result and result.error_code else '' }}</strong>
+        <span id="fingerprint-error-detail">{{ result.detail if result and result.detail else '' }}</span>
+      </div>
+
+      <div class="feature-visuals" id="feature-visuals" {% if not visuals %}hidden{% endif %}>
+        <div class="visual-card"><img id="fingerprint-original" src="{{ visuals.get('original', '') }}" alt="Original fingerprint image"><span>Original image</span></div>
+        <div class="visual-card"><img id="fingerprint-grayscale" src="{{ visuals.get('grayscale', '') }}" alt="Preprocessed grayscale fingerprint"><span>Grayscale / equalized</span></div>
+        <div class="visual-card"><img id="fingerprint-sobel" src="{{ visuals.get('sobel', '') }}" alt="Sobel edge visualization"><span>Sobel magnitude</span></div>
+        <div class="visual-card"><img id="fingerprint-lbp" src="{{ visuals.get('lbp', '') }}" alt="LBP texture visualization"><span>LBP texture</span></div>
+      </div>
+      <p class="result-footnote" id="fingerprint-result-footnote">Feature vector: {{ result.feature_dim if result and result.feature_dim else '—' }} dimensions · Pair vector: {{ result.pair_feature_dim if result and result.pair_feature_dim else '—' }} dimensions · Compared with: {{ result.compared_with if result and result.compared_with else (result.gallery_count if result and result.gallery_count else '—') }} references</p>
+    </section>
+  </main>
+  <script src="{{ url_for('static', filename='js/fingerprint.js') }}"></script>
+</body>
+</html>
