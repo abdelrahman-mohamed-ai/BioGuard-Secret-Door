@@ -142,7 +142,7 @@ Node.js was not installed in the existing environment, so `node --check` could n
 1. Start the unchanged application:
 
    ```powershell
-   cd "C:\Users\Abdelrahman Mohamed\Downloads\BioGuard_Task2_COMPLETE"
+   cd "<PROJECT_ROOT>\Downloads\BioGuard_Task2_COMPLETE"
    .\START_GAME.bat
    ```
 

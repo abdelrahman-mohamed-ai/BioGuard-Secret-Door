@@ -136,7 +136,7 @@ Answers:
 1. Stop any old Flask process and start the project from PowerShell:
 
    ```powershell
-   cd "C:\Users\Abdelrahman Mohamed\Downloads\BioGuard_Task2_COMPLETE"
+   cd "<PROJECT_ROOT>\Downloads\BioGuard_Task2_COMPLETE"
    .\START_GAME.bat
    ```
 

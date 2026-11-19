@@ -5,13 +5,13 @@
 المطلوب وجود الملفات الأصلية في **Downloads** بنفس أسمائها:
 
 ```
-C:\Users\<YOUR_USER>\Downloads\Video_Speech_Actor_01.zip
-C:\Users\<YOUR_USER>\Downloads\Video_Speech_Actor_02.zip
-C:\Users\<YOUR_USER>\Downloads\Video_Speech_Actor_03.zip
-C:\Users\<YOUR_USER>\Downloads\Video_Speech_Actor_04.zip
-C:\Users\<YOUR_USER>\Downloads\Video_Speech_Actor_05.zip
-C:\Users\<YOUR_USER>\Downloads\Video_Speech_Actor_06.zip
-C:\Users\<YOUR_USER>\Downloads\Video_Speech_Actor_07.zip
+<DOWNLOADS>\Downloads\Video_Speech_Actor_01.zip
+<DOWNLOADS>\Downloads\Video_Speech_Actor_02.zip
+<DOWNLOADS>\Downloads\Video_Speech_Actor_03.zip
+<DOWNLOADS>\Downloads\Video_Speech_Actor_04.zip
+<DOWNLOADS>\Downloads\Video_Speech_Actor_05.zip
+<DOWNLOADS>\Downloads\Video_Speech_Actor_06.zip
+<DOWNLOADS>\Downloads\Video_Speech_Actor_07.zip
 ```
 
 **سيبهم ZIP بدون فك ضغط**. الكود سيقرأ ملفات speech audio+video من الداخل ويستخرج WAV من نفس MP4 باستخدام FFmpeg المضمن في `imageio-ffmpeg`. يتجاهل نسخة الفيديو بدون صوت (modality 02) وملفات الأغاني، لذا يوفّر وقت ومساحة.
@@ -23,7 +23,7 @@ C:\Users\<YOUR_USER>\Downloads\Video_Speech_Actor_07.zip
 لما تنزّل `BioGuard_Task2_COMPLETE.zip`، فكّه عشان يبقى المجلد:
 
 ```
-C:\Users\<YOUR_USER>\Downloads\BioGuard_Task2_COMPLETE\
+<DOWNLOADS>\Downloads\BioGuard_Task2_COMPLETE\
     BioGuard_Full_Master_Notebook.ipynb
     setup_venv.ps1
     requirements.txt
